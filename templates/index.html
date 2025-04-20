@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EvolveAI - GPT-4 Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EvolveAI</h1>
+        <form method="POST" action="/chat">
+            <textarea name="message" placeholder="Ask anything..." required></textarea>
+            <button type="submit">Ask GPT-4</button>
+        </form>
+
+        {% if user_message %}
+            <div class="result">
+                <h3>You:</h3>
+                <p>{{ user_message }}</p>
+                <h3>GPT-4:</h3>
+                <p>{{ ai_response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
