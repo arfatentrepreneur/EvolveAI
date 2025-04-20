@@ -23,3 +23,50 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evolve AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 50px;
+        }
+        input, textarea {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .response-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ask Anything from Evolve AI</h1>
+    <form action="/chat" method="post">
+        <textarea name="message" placeholder="Type your question here..." rows="4" required></textarea><br>
+        <button type="submit">Ask</button>
+    </form>
+    
+    {% if reply %}
+    <div class="response-box">
+        <h3>AI's Reply:</h3>
+        <p>{{ reply }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
